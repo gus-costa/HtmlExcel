@@ -6,8 +6,8 @@ class HtmlExcel {
     private $path = 'C:/E64B5C52/Html2Excel';
     private $mainFile = 'spreadsheet.htm';
 
-    private $spreadsheets = [];
-    private $info = [];
+    private $spreadsheets = array();
+    private $info = array();
     private $css;
 
     public function addSheet($name, $contents){
@@ -35,7 +35,7 @@ class HtmlExcel {
 
     private function buildMultiSheet(){
         $boundary = "----=_NextPart_01D21572.46A0BD00";
-        $parts = [];
+        $parts = array();
         $parts[] = 'MIME-Version: 1.0
 X-Document-Type: Workbook
 Content-Type: multipart/related; boundary="'.$boundary.'"';
